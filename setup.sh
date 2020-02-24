@@ -3,6 +3,7 @@
 [[ -d ~/bin ]] || mkdir ~/bin
 if [[ $EUID -eq 0 ]]; then
 	echo "This script is running with root access";
+	./root.sh
 else
 	echo "This script is not running with root access";
 fi
