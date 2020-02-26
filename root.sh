@@ -30,6 +30,6 @@ rm vsc_snippets -rf
 # So Visual Studio Code has Write access
 chmod 777 -R ~/.config/Code
 cd snippets
-sudo ./watch.sh
+./init.sh
 
 exit 0;
