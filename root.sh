@@ -14,6 +14,8 @@ sudo apt install ./code.deb
 
 echo "Installing Git";
 sudo apt-get install git
+git config --global user.name "Christoph Brosch"
+git config --global user.email "christoph.brosch@outlook.de"
 
 # setup 'Snippet Daemon' for Visual Studio Code
 
