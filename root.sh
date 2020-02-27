@@ -24,17 +24,15 @@ sudo apt-get install curl <<< y
 
 # setup 'Snippet Daemon' for Visual Studio Code
 
-mkdir ~/.config/Code
-mkdir ~/.config/Code/User
+sudo -u $ACTIVEUSER mkdir ~/.config/Code
+sudo -u $ACTIVEUSER mkdir ~/.config/Code/User
 # sudo ./script.sh makes %USER => root 
 # chown -hR $USER ~/.config/Code
 cd ~/.config/Code/User
-git clone https://github.com/rahondev/vsc_snippets.git
-mv vsc_snippets snippets
+sudo -u $ACTIVEUSER git clone https://github.com/rahondev/vsc_snippets.git
+sudo -u $ACTIVEUSER mv vsc_snippets snippets
 rm vsc_snippets -rf
-# So Visual Studio Code has Write access
-chmod 777 -R ~/.config/Code
 cd snippets
-./init.sh
+sudo -u $ACTIVEUSER ./init.sh
 
 exit 0;
